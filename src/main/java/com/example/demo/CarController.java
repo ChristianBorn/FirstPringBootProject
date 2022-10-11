@@ -9,7 +9,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/carservice")
 public class CarController {
-    private CarService carServiceApp = new CarService();
+    private final CarService carServiceApp = new CarService();
 
     @GetMapping()
     public List<Car> showAllCars() {
@@ -22,18 +22,7 @@ public class CarController {
         carServiceApp.addCar(car);
     }
 
-//    @PostMapping("/carservice/getcars")
 
-
-//    @GetMapping
-//    public String sayHello(@RequestParam String message) {
-//        return "Hello "+message;
-//    }
-
-//    @GetMapping(path = "{message}")
-//        public String sayHello2(@PathVariable String message) {
-//            return "Hello "+message;
-//    }
 
     }
 
